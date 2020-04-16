@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista produktów</title>
+    <link rel="stylesheet" href="{% static 'main.css' %} ">
+</head>
+<body>
+<h1>Kwiaty w sprzedaży: </h1>
+<ul>
+    {% for product in products %}
+    <li> {{product.title|upper}}
+        - {{ product.price }} - {{ product.color }}
+
+        {% if product.residual %}
+        <a href="{% url 'product_bye' %}"> Bye </a>
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>
+<a href="{% url 'shop' %}"> View </a>
+
+</body>
+</html>

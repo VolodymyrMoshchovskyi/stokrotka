@@ -1,0 +1,71 @@
+{% load static %}
+<!-- {% load javascript_settings_tags %}-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>STOKROTKA</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'main/style.css'%} ">
+
+<!--    <script type="text/javascript">{% javascript_settings %}</script>-->
+</head>
+<body>
+
+<header>
+
+    <button class="c-hamburger">
+        <span>MENU</span>
+    </button>
+    <div class="nav-menu">
+        <div class="logo"><img src="media_folder/logo.jpg" alt="LOGO"></div>
+
+        <nav>
+            <ul>
+                <li>Flowers
+                    <ul class="drop-down">
+                        <li>Flowers </li>
+                        <li>Plants </li>
+                        <li>Presents </li> </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="{% url 'about_us' %}">About us</a>
+                </li>
+                <li>
+                    <a href="{% url 'linux' %}">Contacts</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="menu-mobile">
+            <ul>
+                <li id="xxx">Courses
+                    <ul class="drop-down-mobile">
+                        <li>Flower 1</li>
+                        <li>Flower 2</li>
+                        <li>Flower 3</li>
+                    </ul>
+                </li>
+                <li>About us</li>
+                <li>Contacts</li>
+            </ul>
+        </div>
+
+    </div>
+</header>
+
+<h1>Witaj na internetowej stronie  "STOKROTKA"</h1>
+<p></p>
+<a href="{% url 'product_list' %}"> Przejdź do zakupów </a>
+
+
+<script src = "js/main.js"></script>
+
+</body>
+</html>

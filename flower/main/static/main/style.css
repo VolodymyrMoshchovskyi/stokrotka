@@ -1,0 +1,180 @@
+/*komentarz*/
+
+body {
+    overflow-x: hidden;
+
+}
+
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+li {
+    list-style: none;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.c-hamburger {
+    overflow: hidden;
+    font-size: 0;
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    box-shadow: none;
+    cursor: pointer;
+    border: none;
+    background: brown;
+}
+
+.c-hamburger:focus {
+    outline: none;
+}
+
+.c-hamburger span {
+    display: block;
+    position: absolute;
+    top: 30px;
+    height: 4px;
+    background: white;
+    left: 14px;
+    right: 14px;
+}
+
+.c-hamburger span::before, .c-hamburger span::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #ffffff;
+
+}
+
+.c-hamburger span::before {
+    top: -10px;
+    }
+
+.c-hamburger span::after {
+    bottom: -10px;
+}
+
+.c-hamburger span {
+    transition: 0s 0.3s;
+}
+
+.c-hamburger span::before, .c-hamburger span::after {
+    transition-delay: 0.3s, 0s;
+    transition-duration: 0.3s, 0.3s;
+}
+
+.c-hamburger span::before {
+    transition-property: top, transform;
+}
+
+.c-hamburger span::after {
+    transition-property: bottom, transform;
+}
+
+.c-hamburger.is-active span {
+    background: none;
+}
+
+.c-hamburger.is-active span::before {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+.c-hamburger.is-active span::after {
+    bottom: 0;
+    transform: rotate(+45deg);
+}
+
+
+.c-hamburger.is-active span::before, .c-hamburger.is-active span::after {
+    transition-delay: 0s, 0.3s;
+}
+
+header {
+    border: 1px solid black;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav > ul > li {
+    position: relative;
+    font-size: 20px;
+    padding: 20px;
+    transition: 3s;
+
+}
+
+nav > ul > li:hover {
+    cursor: pointer;
+    background-color: #000000;
+    color: white;
+}
+
+.drop-down {
+    display: none;
+    position: absolute;
+    top: 62px;
+    background-color: black;
+    color: #ffffff;
+    padding: 5px;
+    width: 200px;
+    left: 0;
+}
+
+nav > ul > li:hover .drop-down {
+    display: block;
+    transition: 5s;
+}
+
+.drop-down li:hover {
+    border: 1px solid lightgray;
+}
+
+.menu-mobile {
+    width: 100%;
+    position: absolute;
+    top: 227px;
+    background: red;
+    left: 100%;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    font-size: 28px;
+    color: #ffffff;
+    transition: 1s;
+}
+
+.menu-mobile li:hover {
+    cursor: pointer;
+}
+
+.drop-down-mobile {
+    font-size: 20px;
+    color: #000000;
+    background-color: white;
+    height: 0;
+    overflow: hidden;
+    transition: height 500ms;
+
+}
+
+.left {
+    left: 0;
+}
